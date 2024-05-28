@@ -1,0 +1,31 @@
+<div class="home-container">
+    <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input id="username" type="text" formControlName="username">
+      </div>
+      <button type="submit" [disabled]="loading">Find User</button>
+    </form>
+    <div *ngIf="loading">Loading...</div>
+    <div *ngIf="error" class="error">{{ error }}</div>
+    <div *ngIf="searchResults.length > 0" class="results-container">
+      <div class="profile-column">
+        <div *ngIf="searchResults[0].user" class="profile-box">
+          <img [src]="searchResults[0].user.avatar_url" alt="Avatar">
+        <div>
+          <p><strong>{{ searchResults[0].user.name }}</strong></p>
+          <p><strong>Bio:</strong> {{ searchResults[0].user.bio }}</p>
+          <p><strong>Location:</strong> {{ searchResults[0].user.location }}</p>
+          <p><strong>Updated At:</strong> {{ searchResults[0].user.updated_at | date:'short' }}</p>
+        </div>
+      </div>
+      </div>
+      <div class="repo-column">
+        <div class="repo-list-box">
+          <div *ngFor="let repo of searchResults.slice(1)" class="repo-item">
+            <a [href]="repo.html_url" target="_blank">{{ repo.name }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
