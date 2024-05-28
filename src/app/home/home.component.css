@@ -1,0 +1,79 @@
+form{
+    margin-left: 40%;
+    margin-top: 3%;
+}
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+    
+  .form-group label {
+    width: 10%;
+    margin-bottom: 0; 
+  }
+  .form-group input {
+    width: 27%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  button {
+    width: 10%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 13%;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  .profile-box {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-left: 250px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    height: 70%;
+  }
+  
+  .profile-box img {
+    width: 102%;
+  }
+  .repo-list-box {
+    flex: 2;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: -10%;
+    margin-right: 20%;
+  }
+  
+  .repo-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .repo-item:last-child {
+    border-bottom: none;
+  }
+  
+  .repo-item a {
+    text-decoration: none;
+  }
+  
+  .results-container {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .profile-column, .repo-column {
+    flex: 1;
+  }
